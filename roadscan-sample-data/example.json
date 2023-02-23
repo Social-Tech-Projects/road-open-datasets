@@ -1,0 +1,62 @@
+{
+	info: {
+		label: "Roadscan - example data",
+		id: "2j1iw039f",
+	},
+	"accelX": 12.2,
+	"accelY" : 5.2,
+	"accelZ": 9.7,
+	"gX": -2.5,
+	"gY": 1.8,
+	"gZ": 1.7,
+	"light": 12,
+	"sound": 60,
+	"image": ["https://servername/4542624646.jpg", "https://servername/4542624648.jpg"],
+	"thermal":["https://servername/4542624574.raw"],
+	"pm1_0": 15,
+	"pm2_5":18,
+	"pm10": 25,
+	"satellite": 6,
+	"speed": 45,
+	"address" : {"address_property": "property_value"},
+	"dataProvider": "R.O.A.D. System",
+	"dateCreated": "2021-12-20 10:01:00.999999",
+	"dateModified": "2021-12-20 10:02:00.999999",
+	"description": "Example description",
+	"id": "2j1iw039f",
+	"name": "Example name",
+	"owner": [634,36346],
+	"seeAlso": [""https://servername/example.txt", ""https://servername/example2.txt"],
+	"source": "https://servername/source/ID_SOURCE",
+	"location": {
+	"type": "FeatureCollection",
+	"features": [
+			{
+			  type: "Feature",
+			  properties: {
+				address: "Lyngbyvej"
+			  },
+			  geometry: {
+				type: "LineString",
+				coordinates: [
+				  [12.551943, 55.706654, 17.46],
+				  [12.54978, 55.708336, 7.5],
+				],
+			  },
+			}
+		  ,
+			{
+			  type: "Feature",
+			  properties: {
+				address: "Lyngbyvej"
+			  },
+			  geometry: {
+				type: "LineString",
+				coordinates: [
+				  [12.54978, 55.708336, 7.5],
+				  [12.550897, 55.709074, 7.07],
+			}
+		  ]
+		}
+   }
+}
