@@ -1,0 +1,73 @@
+================================
+The ROAD Scan JSON Format Specification
+================================
+
+:Abstract: 
+  ROAD Scan JSON is an enriched geospatial data interchange format based on JavaScript Object
+  Notation (JSON).
+
+:Authors:
+  Social Tech Projects ApS
+
+:Revision: 1.0
+:Date: 1 January 2021
+
+.. contents::
+
+1. Introduction
+===============
+
+ROAD Scan JSON is an enriched format for encoding a variety of sensor data about
+road infrastructure and geographic data structures.
+ROAD Scan JSON object contains also geoJSON objects that represent a geometry,
+a feature, or a collection of features.
+
+GeoJSON objects supports the following geometry types: Point, LineString,
+Polygon, MultiPoint, MultiLineString, MultiPolygon, and GeometryCollection.
+Features in GeoJSON contain a geometry object and additional properties, and a
+feature collection represents a list of features.
+
+A complete GeoJSON data structure is always an object (in JSON terms). In
+GeoJSON, an object consists of a collection of name/value pairs -- also called
+members. For each member, the name is always a string. Member values are either
+a string, number, object, array or one of the literals: "true", "false", and
+"null". An array consists of elements where each element is a value as
+described above. 
+
+
+:Dataset: Roadscan
+
+accelX(float): Accelerometer data (m/s^2) measured on x axis
+accelY(float): Accelerometer data (m/s^2) measured on y axis
+accelZ(float): Accelerometer data (m/s^2) measured on z axis
+address(object): The mailing address. Model: https://schema.org/address
+category(string): The category of the POI (Point of interest)
+dataProvider(string): A sequence of characters identifying the provider of the harmonised data entity.
+dateCreated(string): Entity creation timestamp. This will usually be allocated by the storage platform.
+dateModified(string): Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.
+description(string): A description of this item
+gX(float): Angular velocity data (degrees per second) measured on x axis
+gY(float): Angular velocity data (degrees per second) measured on y axis
+gZ(float): Angular velocity data (degrees per second) measured on z axis
+id(*): Unique identifier of the entity
+image(array): list of uris of HD scan images/frames taken with machine vision system during scan
+light(int): Illumination (lx) , luminous flux per unit area  
+location(*): Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
+name(string): The name of this item.
+owner(array): A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
+pm1_0(int): PM1.0 Atmospheric environment concentration (ug/m3)
+pm2_5(int): PM2.5 Atmospheric environment concentration (ug/m3)
+pm10(int): PM10.0 Atmospheric environment concentration (ug/m3)
+satellite(int): number of satellites that provided the geo location measurement
+severity(int): severity of damage (data annotations)
+sound(int): Sound pressure intensity (dB), it is measured in a transitory condition or stationary
+speed(int): velocity of the vehicle during the scan measured in Km/h
+seeAlso(*): list of uri pointing to additional resources about the item
+source(string): A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.
+thermal(array): thermal scan measured in Celsius degree per pixel
+type(string): NGSI-LD Entity Type. It must be equal to Roadscan
+width(int): road width (cm) enriched data from Machine Vision and photogrammetry algorithms
+
+
+
+
