@@ -1,1 +1,0 @@
-This folder contains json sample data of roadscan formatted according to the latest specification roadscan-json-spec document.
